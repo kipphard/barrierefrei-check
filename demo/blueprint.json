@@ -1,12 +1,7 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-  "meta": {
-    "title": "Barrierefrei Check — Demo",
-    "description": "Per-visitor WordPress Playground demo: installs the plugin and seeds a real audit report so the dashboard is populated instantly."
-  },
   "landingPage": "/wp-admin/admin.php?page=barrierefrei-check",
   "preferredVersions": { "php": "8.3", "wp": "latest" },
-  "phpExtensionBundles": ["kitchen-sink"],
   "features": { "networking": true },
   "login": true,
   "steps": [
