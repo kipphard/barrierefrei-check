@@ -1,0 +1,310 @@
+/* Barrierefrei Check – Admin Styles */
+
+/* Allgemeines Layout */
+.bfc-wrap {
+	max-width: 1100px;
+}
+
+/* Scan-Box */
+.bfc-scan-box {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 16px 20px;
+	margin-bottom: 20px;
+}
+
+.bfc-scan-btn {
+	font-size: 14px;
+}
+
+/* Empty State */
+.bfc-empty-state {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 32px;
+	text-align: center;
+}
+
+.bfc-empty-icon {
+	font-size: 48px;
+	width: 48px;
+	height: 48px;
+	color: #a7aaad;
+	display: block;
+	margin: 0 auto 16px;
+}
+
+/* Score-Anzeige */
+.bfc-score-row {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 24px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 20px 24px;
+	margin-bottom: 20px;
+}
+
+.bfc-score-gauge {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 80px;
+}
+
+.bfc-score-number {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.bfc-score-good  { color: #00a32a; }
+.bfc-score-medium { color: #dba617; }
+.bfc-score-bad   { color: #d63638; }
+
+.bfc-score-label {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #646970;
+	margin-top: 4px;
+}
+
+.bfc-scanned-at {
+	margin: 0;
+	font-size: 12px;
+	color: #646970;
+	align-self: flex-end;
+}
+
+/* Severity-Badges */
+.bfc-severity-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+}
+
+.bfc-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 4px 10px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.bfc-badge-critical {
+	background: #fce8e8;
+	color: #8a1f1f;
+	border: 1px solid #d63638;
+}
+
+.bfc-badge-serious {
+	background: #fef3cd;
+	color: #7a4b00;
+	border: 1px solid #e65f00;
+}
+
+.bfc-badge-moderate {
+	background: #fff8e5;
+	color: #7a5800;
+	border: 1px solid #dba617;
+}
+
+.bfc-badge-minor {
+	background: #f0f0f1;
+	color: #3c434a;
+	border: 1px solid #c3c4c7;
+}
+
+/* Disclaimer */
+.bfc-disclaimer {
+	background: #f0f6fc;
+	border-left: 4px solid #2271b1;
+	padding: 12px 16px;
+	margin: 16px 0;
+	font-size: 13px;
+}
+
+/* Issue-Liste */
+.bfc-issue-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 12px;
+}
+
+.bfc-issue-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.bfc-card-critical { border-left: 4px solid #d63638; }
+.bfc-card-serious  { border-left: 4px solid #e65f00; }
+.bfc-card-moderate { border-left: 4px solid #dba617; }
+.bfc-card-minor    { border-left: 4px solid #c3c4c7; }
+
+.bfc-issue-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 16px;
+	background: #f6f7f7;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.bfc-wcag-ref {
+	font-size: 11px;
+	color: #646970;
+	font-family: monospace;
+}
+
+.bfc-issue-title {
+	font-size: 14px;
+}
+
+.bfc-issue-count {
+	font-size: 12px;
+	color: #646970;
+}
+
+.bfc-issue-body {
+	padding: 12px 16px;
+}
+
+.bfc-issue-desc {
+	margin-top: 0;
+}
+
+.bfc-issue-fix {
+	margin-bottom: 8px;
+}
+
+.bfc-issue-url {
+	font-size: 12px;
+	word-break: break-all;
+}
+
+.bfc-issue-context-wrap {
+	margin-top: 8px;
+}
+
+.bfc-issue-context-wrap summary {
+	cursor: pointer;
+	font-size: 12px;
+	color: #2271b1;
+}
+
+.bfc-issue-context {
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	padding: 8px 12px;
+	font-size: 12px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	word-break: break-all;
+	margin: 6px 0 0;
+}
+
+/* Scanned URLs */
+.bfc-scanned-urls {
+	margin-top: 20px;
+	font-size: 13px;
+}
+
+.bfc-scanned-urls summary {
+	cursor: pointer;
+	color: #2271b1;
+}
+
+.bfc-scanned-urls ul {
+	margin-top: 8px;
+}
+
+/* No issues */
+.bfc-no-issues {
+	background: #edfaef;
+	border: 1px solid #00a32a;
+	border-radius: 4px;
+	padding: 16px 20px;
+}
+
+/* Settings – Pro-Teaser */
+.bfc-settings-info,
+.bfc-pro-teaser {
+	max-width: 680px;
+	padding: 20px 24px;
+	margin-bottom: 20px;
+}
+
+.bfc-pro-teaser {
+	background: #f6f7f7;
+	border: 1px dashed #a7aaad;
+}
+
+.bfc-pro-badge {
+	display: inline-block;
+	margin-left: 8px;
+	padding: 2px 8px;
+	background: #2271b1;
+	color: #fff;
+	font-size: 11px;
+	border-radius: 3px;
+	font-weight: 400;
+	vertical-align: middle;
+}
+
+.bfc-pro-features {
+	list-style: none;
+	padding: 0;
+	margin: 12px 0;
+}
+
+.bfc-pro-features li {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 0;
+	border-bottom: 1px solid #dcdcde;
+	color: #646970;
+}
+
+.bfc-pro-features li:last-child {
+	border-bottom: none;
+}
+
+.bfc-pro-features .dashicons {
+	color: #a7aaad;
+}
+
+/* Statement-Seite */
+.bfc-statement {
+	line-height: 1.7;
+}
+
+.bfc-statement address {
+	font-style: normal;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 12px 16px;
+	display: inline-block;
+	margin: 8px 0;
+}
+
+.bfc-statement-date {
+	color: #646970;
+	font-size: 13px;
+}
