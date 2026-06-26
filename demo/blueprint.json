@@ -9,13 +9,13 @@
       "step": "installPlugin",
       "pluginData": {
         "resource": "url",
-        "url": "https://github.com/kipphard/barrierefrei-check/releases/download/v0.1.0/barrierefrei-check-0.1.0.zip"
+        "url": "https://github.com/kipphard/accessibility-check/releases/download/v0.2.0/accessibility-check-0.2.0.zip"
       },
       "options": { "activate": true }
     },
     {
       "step": "runPHP",
-      "code": "<?php require_once '/wordpress/wp-load.php';\n$broken = '<h1>Beispielseite</h1><h3>Übersprungene Überschriftenebene</h3><img src=\"/logo.jpg\"><a href=\"/leer\"></a><label>Suche</label><input type=\"text\" name=\"q\"><button></button><input type=\"image\" src=\"/btn.png\">';\n$page_id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Demo-Seite (mit Fehlern)','post_content'=>$broken));\nif (class_exists('Kipphard\\\\Barrierefrei\\\\Rules')) {\n  libxml_use_internal_errors(true);\n  $dom = new DOMDocument();\n  $dom->loadHTML('<?xml encoding=\"utf-8\" ?><html lang=\"\"><head></head><body>'.$broken.'</body></html>');\n  libxml_clear_errors();\n  $xpath = new DOMXPath($dom);\n  $url = get_permalink($page_id);\n  $issues = Kipphard\\Barrierefrei\\Rules::run($dom, $xpath, $url);\n  $report = new Kipphard\\Barrierefrei\\Report($issues, array($url));\n  update_option('bfc_last_report', $report->to_array());\n}\n"
+      "code": "<?php require_once '/wordpress/wp-load.php';\n$broken = '<h1>Beispielseite</h1><h3>Übersprungene Überschriftenebene</h3><img src=\"/logo.jpg\"><a href=\"/leer\"></a><label>Suche</label><input type=\"text\" name=\"q\"><button></button><input type=\"image\" src=\"/btn.png\">';\n$page_id = wp_insert_post(array('post_type'=>'page','post_status'=>'publish','post_title'=>'Demo Page (with Errors)','post_content'=>$broken));\nif (class_exists('Kipphard\\\\Barrierefrei\\\\Rules')) {\n  libxml_use_internal_errors(true);\n  $dom = new DOMDocument();\n  $dom->loadHTML('<?xml encoding=\"utf-8\" ?><html lang=\"\"><head></head><body>'.$broken.'</body></html>');\n  libxml_clear_errors();\n  $xpath = new DOMXPath($dom);\n  $url = get_permalink($page_id);\n  $issues = Kipphard\\Barrierefrei\\Rules::run($dom, $xpath, $url);\n  $report = new Kipphard\\Barrierefrei\\Report($issues, array($url));\n  update_option('bfc_last_report', $report->to_array());\n}\n"
     }
   ]
 }
